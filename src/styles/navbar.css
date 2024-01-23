@@ -1,0 +1,10 @@
+#navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 1rem 0;
+  background-color: deepskyblue;
+  border-bottom: solid 0.2rem #172d65;
+  margin-bottom: 2rem;
+}
