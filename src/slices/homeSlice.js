@@ -1,32 +1,31 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 // example slice
 const initialState = {
-  data: ["Hello"],
-  error: ""
-}
+  data: ['Hello'],
+  error: '',
+};
 
 const homeSlice = createSlice({
-  initialState: initialState,
-  name: "home",
+  initialState,
+  name: 'home',
   reducers: {
     addString: (state, { payload }) => {
-      const isString = typeof(payload) === "string";
-      const isEmpty = payload === ""
+      const isString = typeof (payload) === 'string';
+      const isEmpty = payload === '';
       if (isString && !isEmpty) {
-        console.log(payload)
-        state.data.push(payload)
+        state.data.push(payload);
       } else if (!isString) {
-        state.error = "You can insert only text"
+        state.error = 'You can insert only text';
       } else {
-        state.error = "Field is empty"
+        state.error = 'Field is empty';
       }
     },
     cleanMessage: (state) => {
-      state.error = ""
-    }
-  }
-})
+      state.error = '';
+    },
+  },
+});
 
-export default homeSlice.reducer
+export default homeSlice.reducer;
 
-export const { addString, cleanMessage } = homeSlice.actions
+export const { addString, cleanMessage } = homeSlice.actions;
