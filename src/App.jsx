@@ -11,6 +11,8 @@ import Logout from './components/Logout';
 import Signup from './components/Signup';
 import Motorcycles from './components/Motorcycles';
 import NotFound from './components/NotFound';
+import MotorcycleForm from './components/MotorcycleForm';
+import MotorcycleDetails from './components/MotorcycleDetails';
 import { setIconUser, setnewIconUser } from './store/userSlice';
 
 const App = () => {
@@ -49,9 +51,9 @@ const App = () => {
             <Route exact path="/" element={<Login />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/motorcycles" element={<Motorcycles />} />
-            {/* <Route exact path="/motorcycle/new" element={<MotorcycleForm />} />
+            <Route exact path="/motorcycle/new" element={<MotorcycleForm />} />
             <Route path="/motorcycle/:id" element={<MotorcycleDetails />} />
-            <Route path="/reserve/new" element={<Reserve />} />
+            {/* <Route path="/reserve/new" element={<Reserve />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/delete" element={<DeleteMotorcycles />} /> */}
             <Route path="/signup" element={<Signup />} />
