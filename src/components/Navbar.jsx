@@ -1,11 +1,17 @@
-import { NavLink } from 'react-router-dom';
-import '../styles/navbar.css';
+import React from 'react';
+import Title from './navComponents/Title';
+import Menu from './navComponents/Menu';
+import Footer from './navComponents/Footer';
+import '../styles/Navbar.css';
 
 const Navbar = () => (
-  <div id="navbar">
-    <NavLink to="/" className="navlink">Home</NavLink>
-    <NavLink to="/reservations" className="navlink">Reservations</NavLink>
-  </div>
+  <>
+    <nav className="navContainer controlVisibility">
+      <Title />
+      <Menu />
+      <Footer />
+    </nav>
+  </>
 );
 
 export default Navbar;
