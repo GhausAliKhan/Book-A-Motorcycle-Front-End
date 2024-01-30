@@ -1,40 +1,67 @@
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import './App.css';
-import { useState } from 'react';
-import { addString, cleanMessage } from './slices/homeSlice';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import Signup from './components/Signup';
+import Motorcycles from './components/Motorcycles';
+import NotFound from './components/NotFound';
+import { setIconUser, setnewIconUser } from './store/userSlice';
 
-function App() {
-  const [input, setInput] = useState('');
-  const { data, error } = useSelector((state) => state.home);
+const App = () => {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setIconUser());
+  }, [dispatch]);
 
-  const clickHandler = () => {
-    dispatch(addString(input));
-    setTimeout(() => {
-      dispatch(cleanMessage());
-    }, 2000);
+  const restoreIcon = useSelector((state) => state.user.icon);
+  const currentUser = useSelector((state) => state.user.currentUser);
 
-    setInput('');
-  };
-
-  const updateInput = (e) => {
-    setInput(e.target.value);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.keyCode === 13) {
-      clickHandler();
-    }
-  };
-
+  library.add(faXmark, faBars);
   return (
-    <div id="container">
-      <h2>{data.join(' ')}</h2>
-      <input type="text" placeholder="Type something to add" onChange={updateInput} onKeyDown={handleKeyDown} value={input} />
-      <button type="button" onClick={clickHandler}>Add</button>
-      { error ? <small className="error-msg">{error}</small> : null }
-    </div>
+    <>
+      <div className="app">
+        {currentUser && (
+          <div className="hamburguerContainer">
+            <FontAwesomeIcon
+              icon={restoreIcon}
+              id="hamburrguerIcon"
+              onClick={() => {
+                if (restoreIcon === 'bars') {
+                  dispatch(setnewIconUser('xmark'));
+                } else {
+                  dispatch(setnewIconUser('bars'));
+                }
+                document
+                  .querySelector('.navContainer')
+                  .classList.toggle('controlVisibility');
+              }}
+            />
+          </div>
+        )}
+        <div id="mainContainer">
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/motorcycles" element={<Motorcycles />} />
+            {/* <Route exact path="/motorcycle/new" element={<MotorcycleForm />} />
+            <Route path="/motorcycle/:id" element={<MotorcycleDetails />} />
+            <Route path="/reserve/new" element={<Reserve />} />
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/delete" element={<DeleteMotorcycles />} /> */}
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;

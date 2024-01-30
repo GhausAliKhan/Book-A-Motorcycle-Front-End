@@ -1,0 +1,113 @@
+@media screen and (min-width: 768px) {
+  .loginContainer {
+    /* background-image: url('../img/giorniVespa.webp'); */
+    background-position: 700px;
+    background-size: 70%;
+  }
+
+  .logoutButtonContainer {
+    gap: 1rem;
+  }
+}
+
+.loginContainer {
+  height: 100vh;
+  justify-content: center;
+
+  /* background-image: url('../img/yellowVespa.webp'); */
+  background-position: calc(100% + 50px);
+  background-repeat: no-repeat;
+  background-size: calc(70% + 15px);
+}
+
+.logoutButtonContainer {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.loginDiv {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.formContainer {
+  gap: 2rem;
+}
+
+.formContainer div {
+  gap: 0.5rem;
+}
+
+.formContainer div input {
+  padding: 0.4rem 0.4rem;
+  opacity: 0.8;
+}
+
+.formContainer div textarea {
+  padding: 0.7rem;
+  opacity: 0.8;
+  transition: all 1s ease-in-out;
+  border: 2px solid black;
+  resize: vertical;
+}
+
+select {
+  padding: 0.7rem;
+  transition: all 1s ease-in-out;
+}
+
+.formContainer div textarea:focus,
+select:focus {
+  border-color: #97bf11;
+  outline-style: dotted;
+}
+
+.formContainer div input:focus,
+select:focus {
+  border-color: #97bf11;
+  outline-style: dotted;
+}
+
+.loginButtons {
+  gap: 8px;
+  align-items: center;
+}
+
+.infoParagraph {
+  width: 20%;
+  background-color: rgb(190, 190, 87);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  align-self: center;
+  font-size: 16px;
+}
+
+#loginBtn {
+  background-color: #97bf11;
+  color: white;
+}
+
+#logoutLi {
+  cursor: pointer;
+  color: black;
+}
+
+.logoutBtn {
+  padding: 0.3rem 1.3rem;
+  color: white;
+  background-color: red;
+}
+
+#signUp {
+  background-color: #97bf11;
+  color: white;
+}
+
+.loginInfoContainer {
+  width: 30%;
+  align-self: flex-start;
+  margin-top: -10%;
+  margin-left: 4%;
+}

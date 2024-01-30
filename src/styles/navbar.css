@@ -1,10 +1,156 @@
-#navbar {
-  width: 100%;
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.controlVisibility {
   display: flex;
+}
+
+.navContainer {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 15fr 70fr 15fr;
+  border-right: 3px solid rgba(207, 196, 196, 0.431);
+  transition: all 1s 0.5s ease-in-out;
+}
+
+.navContainer .navList .active {
+  background-color: #97bf11;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 0.8rem 0.8rem 0;
+}
+
+.logoutingContainer {
+  height: 25%;
+  background-color: white;
+  margin-top: -5rem;
+  padding-left: 0.6rem;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navContainer {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    /* background-image: url("../img/whiteVespa.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom; */
+    opacity: 1;
+    z-index: 99999;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: black;
+  }
+
+  .navContainer footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #93c000;
+    color: white;
+    justify-content: center;
+    padding: 0.2rem 0;
+    width: 100%;
+  }
+
+  .controlVisibility {
+    display: none;
+  }
+}
+
+.titleContainer {
   justify-content: center;
-  gap: 4rem;
-  padding: 1rem 0;
-  background-color: deepskyblue;
-  border-bottom: solid 0.2rem #172d65;
-  margin-bottom: 2rem;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: -1rem;
+}
+
+.titleContainer img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.7);
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid black 1px;
+}
+
+footer ul li {
+  cursor: pointer;
+}
+
+.navList {
+  margin-top: 2rem;
+  gap: 2rem;
+  text-transform: uppercase;
+}
+
+.navList li {
+  display: flex;
+  margin: 0 0.5rem;
+}
+
+.navList li a {
+  font-weight: bold;
+  color: black;
+  width: 100%;
+}
+
+.navigation.hidden {
+  transform: translateX(-100%);
+}
+
+.navBody {
+  margin-top: 1rem;
+  gap: 8rem;
+}
+
+.footerNav {
+  margin-top: 2rem;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.footerNav ul {
+  gap: 15px;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.copy {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 12px;
+}
+
+#logoutLi {
+  background-color: rgb(235, 0, 0);
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+#logoBtn {
+  background-color: transparent;
+  border: transparent;
 }
