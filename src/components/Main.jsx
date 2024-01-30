@@ -18,7 +18,7 @@ const Main = () => {
   if (isLoading) {
     return (
       <div className="infoContainer flexV">
-        <p>Loading... your  motorcycles😁😍</p>
+        <p>Loading your Motorcycles</p>
       </div>
     );
   }
