@@ -2,7 +2,7 @@ import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getMotorcycles } from '../store/motorcycleSlice';
-import DeleteItem from './DeteteItem';
+import DeleteItem from './DeleteItem';
 import DeleteModal from './Modal';
 import Navbar from './Navbar';
 import '../styles/deleteMotorcycle.css';
