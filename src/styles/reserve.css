@@ -1,7 +1,7 @@
 .reserveContainer {
   background-size: 100%;
   background-position: center;
-  background-image: url('../img/VESPA_YELLOW.jpg');
+  background-image: url("../images/background-image.jpg");
   color: white;
   background-repeat: no-repeat;
 }

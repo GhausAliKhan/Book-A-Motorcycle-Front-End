@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-// import Logo from '../../img/logo.xyz';
+import Logo from '../../images/Logo.png';
 import { setIconUser } from '../../store/userSlice';
 
 const Title = () => {
@@ -20,7 +20,7 @@ const Title = () => {
           }}
         >
           <img
-            // src={Logo}
+            src={Logo}
             alt="Logo"
           />
         </button>

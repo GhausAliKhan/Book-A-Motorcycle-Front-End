@@ -2,7 +2,7 @@ import React from 'react';
 import Title from './navComponents/Title';
 import Menu from './navComponents/Menu';
 import Footer from './navComponents/Footer';
-import '../styles/Navbar.css';
+import '../styles/navbar.css';
 
 const Navbar = () => (
   <>

@@ -3,8 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteMotorcycles, getMotorcycles } from '../store/motorcycleSlice';
 
 const hideModal = () => {
-  document.querySelector('#deleteModal').classList.add('hideComponent');
-  document.querySelector('.bodyContainer').classList.remove('hiddenScroll');
+  const deleteModal = document.querySelector('#deleteModal');
+  const bodyContainer = document.querySelector('.bodyContainer');
+
+  if (deleteModal) {
+    deleteModal.classList.add('hideComponent');
+  }
+
+  if (bodyContainer) {
+    bodyContainer.classList.remove('hiddenScroll');
+  }
 };
 
 const DeleteModal = () => {

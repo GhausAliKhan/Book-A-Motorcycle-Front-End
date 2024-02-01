@@ -26,7 +26,7 @@ const Main = () => {
   if (error) {
     return (
       <div className="infoContainer flexV">
-        <p>Upss! There is an Error😁</p>
+        <p>There is an Error</p>
         <p>Please Check your Connection and try Again!</p>
       </div>
     );
@@ -35,8 +35,7 @@ const Main = () => {
   if (motorcycles.length === 0) {
     return (
       <div className="infoContainer flexV">
-        <p>Upss! There is no motorcycles😁</p>
-        <p>But you can Add it😍 or Contact the App Adm.</p>
+        <p>There is no motorcycles for now</p>
       </div>
     );
   }
