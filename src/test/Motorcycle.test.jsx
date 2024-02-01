@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import Motorcycle from '../components/motorcycle';
+import Motorcycle from '../components/Motorcycle';
 import store from '../store/store';
 
 describe('Motorcycle component', () => {
