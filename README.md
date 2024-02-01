@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" width="300px" alt="Logo">
+  <img src="/src/imagesLogo.png" width="350px" height="200px" alt="Logo">
 </p>
 <a name="readme-top"></a>
 

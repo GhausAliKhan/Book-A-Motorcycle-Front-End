@@ -6,7 +6,7 @@ import {
   moneyDisplay, timeCalculation, validateTime1, validateTime2,
 } from '../timeCalc';
 
-const FormReserve = () => {
+const ReserveForm = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
   const headerRequest = useSelector((state) => state.user.requestHeader);
   const selectedMoto = useSelector((state) => state.motorcycle.selectedMotorcycle);
@@ -422,4 +422,4 @@ const FormReserve = () => {
   );
 };
 
-export default FormReserve;
+export default ReserveForm;
