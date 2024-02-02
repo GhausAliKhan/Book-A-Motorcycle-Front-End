@@ -38,7 +38,7 @@ describe('Testing the Time Validator functionality', () => {
 
   test('should return valid==true for date >= today ', () => {
     const today = new Date();
-    const bookingDate = `${today.getDate()}-${1 + today.getMonth()}-${today.getFullYear()}`;
+    const bookingDate = `${1 + today.getDate()}-${today.getMonth()}-${today.getFullYear()}`;
     const valid = validateTime1(bookingDate);
     expect(valid).toBe(true);
   });
